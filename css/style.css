@@ -1,5 +1,6 @@
 body {
 	background: url('../images/booth_main1_blur.jpg') no-repeat top center;
+	min-height: 100%;
 }
 
 .intro-box {
