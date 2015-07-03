@@ -1,0 +1,22 @@
+body {
+	background: url('../images/booth_main1_blur.jpg') no-repeat top center;
+}
+
+.intro-box {
+	text-align: center;
+	color: #fff;
+	height: 250px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -150px;
+}
+
+h1 {
+	font-size: 7em;
+}
+
+.touch-start {
+	font-size: 2em;
+}
