@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Far-More Shade</title>
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body onclick="start()">
-	
-	<div class="intro-box" id="content">
-		<h1>Far-More Shade</h1>
-		<div class="touch-start">Touch to start</div>
-	</div>
+<body>
+	<div ng-view></div>
 	
 
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-fullscreen/src/angular-fullscreen.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.fullscreen.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
