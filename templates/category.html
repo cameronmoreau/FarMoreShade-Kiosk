@@ -1,0 +1,9 @@
+<div class="fullscreen">
+	<a class="btn btn-primary" href="/#/categories">back</a>
+	<h3>{{ selectedCategory }}</h3>
+	<ul>
+		<li ng-repeat="item in items">
+			<img ng-src="{{ item.path }}">
+		</li>
+	</ul>
+</div>

@@ -1,3 +1,9 @@
 <div class="fullscreen">
-	<h1>This is a test page</h1>
+	<a class="btn btn-primary" href="/#/">back</a>
+		<h1>Select a category</h1>
+		<ul>
+			<li ng-repeat="category in categories">
+				<a href="/#/category/{{ category }}">{{ category }}</a>
+			</li>
+	</ul>
 </div>
