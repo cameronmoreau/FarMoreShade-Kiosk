@@ -19,17 +19,24 @@ html, body { min-height: 100% }
 .intro-box {
 	text-align: center;
 	color: #fff;
-	height: 250px;
-	margin-top: 15em;
+	position: relative;
+}
+
+.intro-box > * {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 20vh;
+}
+
+.intro-box .touch-start {
+	font-size: 3em;
+	margin-top: 80vh;
 }
 
 h1 {
-	font-size: 8em;
+	font-size: 11em;
   	font-family: 'Indie Flower', cursive;
-}
-
-.touch-start {
-	font-size: 2em;
 }
 
 .category-select-box a {
