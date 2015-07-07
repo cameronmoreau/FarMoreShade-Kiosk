@@ -60,7 +60,10 @@ app.factory('LocalData', function($http, $q) {
 
 app.controller('IntroController', function($scope, $location) {
 	$scope.start = function() {
-  		$location.path('categories');
+		$('#intro-box').addClass('animated bounceOutDown');
+		$('#intro-box').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			window.location.href = '/#/categories';
+		});
 	};
 });
 
