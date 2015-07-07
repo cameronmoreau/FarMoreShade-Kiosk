@@ -16,6 +16,10 @@ html, body { min-height: 100% }
 	background-size: cover;
 }
 
+.content-bg {
+	background: url('../images/bg-repeat.png');
+}
+
 #intro-box {
 	text-align: center;
 	color: #fff;
@@ -40,14 +44,49 @@ h1 {
   	font-family: 'Indie Flower', cursive;
 }
 
-.category-select-box a {
-	position: relative;
-	height: 300px;
-	display: block;
+h2 {
+	font-size: 6em;
+  	font-family: 'Indie Flower', cursive;
+  	color: #fff;
 }
 
-.category-select-box img {
-	max-width: 100%;
+a:hover, a:active {
+	text-decoration: none;
+}
+
+.row-eq-height {
+    display: table;
+}
+
+.row-eq-height [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.header {
+	background: rgba(0,0,0,0.2);
+	margin-bottom: 30px;
+}
+
+.header .header-back {
+	font-size: 2.5em;
+	color: #fff;
+	background: rgba(0,0,0,0.2);
+	vertical-align: middle;
+	font-family: 'Indie Flower', cursive;
+}
+
+.header > * {
+	display: inline-block;
+}
+
+.content {
+	text-align: center;
+}
+
+.thumbnail {
+	//display: none;
 }
 
 .category-select-box .title {
@@ -55,6 +94,11 @@ h1 {
 	background: rgba(0,0,0,0.5);
 	color: #fff;
 	font-size: 5em;
-	text-align: center;
-	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
+
+

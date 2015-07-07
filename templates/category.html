@@ -1,9 +1,14 @@
-<div>
-	<a class="btn btn-primary" href="/#/categories">back</a>
-	<h3>{{ selectedCategory }}</h3>
-	<ul>
-		<li ng-repeat="item in items">
-			<img ng-src="{{ item.path }}" width="140">
-		</li>
-	</ul>
+<div class="fullscreen content-bg">
+	<div class="header row row-eq-height">
+		<a class="header-back col-md-1" href="/#/categories"><i class="fa fa-chevron-left"></i> Back</a>
+		<h2 class="col-md-11">{{ selectedCategory }}</h2>
+	</div>
+	
+	<div class="content">
+		<div class="col-md-2 thumb" ng-repeat="item in items">
+			<a class="thumbnail">
+				<img ng-src="{{ item.path }}" class="img-responsive" sb-load="onImageLoad($event)">
+			</a>
+		</div>
+	</div>
 </div>

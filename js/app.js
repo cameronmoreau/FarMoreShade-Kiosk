@@ -1,4 +1,18 @@
-var app = angular.module('app', ['ngRoute', 'FBAngular']);
+angular.module('sbLoad', []).directive('sbLoad', ['$parse', function ($parse) {
+	return {
+		restrict: 'A',
+		link: function (scope, elem, attrs) {
+			var fn = $parse(attrs.sbLoad);
+			elem.on('load', function (event) {
+				scope.$apply(function() {
+					fn(scope, { $event: event });
+				});
+			});
+		}
+	};
+}]);
+
+var app = angular.module('app', ['ngRoute', 'sbLoad']);
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
@@ -78,6 +92,9 @@ app.controller('CategorySelectController', function($scope, $location, LocalData
 	/*LocalData.getCategories().then(function() {
 		$scope.categories = LocalData.data();
 	});*/
+	$scope.onImageLoad = function(e) {
+		$(e.target).parent().addClass('animated bounceIn');
+	};
 });
 
 app.controller('CategoryController', function($scope, $routeParams, LocalData, $http) {
@@ -92,6 +109,10 @@ app.controller('CategoryController', function($scope, $routeParams, LocalData, $
 		.success(function(data) {
 			$scope.items = data.data;
 		});
+
+	$scope.onImageLoad = function(e) {
+		$(e.target).parent().addClass('animated bounceIn');
+	};
 });
 
 
