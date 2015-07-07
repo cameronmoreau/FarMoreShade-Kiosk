@@ -1,4 +1,5 @@
 <?php
+
 header('Content-Type: application/json');
 define('FILE_IMAGE', 1);
 define('FILE_VIDEO', 2);
@@ -9,8 +10,17 @@ $categories = array_splice($categories, 2);
 
 /* Category was not set */
 if(!isset($_GET['category'])) {
+	$data = array();
+
+	foreach ($categories as $category) {
+		array_push($data, array(
+			'title' => $category,
+			'image' =>getRandomImage($category)
+		));
+	}
+
 	echo json_encode(array(
-		'categories' => $categories
+		'categories' => $data
 	));
 } 
 
@@ -29,6 +39,17 @@ else {
 			'error' => 'No category found'
 		));
 	}
+}
+
+function getRandomImage($category) {
+	$images = getImagesFromDir('Categories/'.$category);
+
+	do {
+		$random = rand(0, count($images) - 1);
+		$images = $images[$random];
+	} while($images['type'] != 'image');
+
+	return $images['path'];
 }
 
 /* Strips out everything not an image or video from scandir */

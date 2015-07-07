@@ -58,13 +58,8 @@ app.factory('LocalData', function($http, $q) {
 	return LocalData;
 });
 
-app.controller('IntroController', function($scope, $location, Fullscreen) {
-	$scope.isFullScreen = false;
-
+app.controller('IntroController', function($scope, $location) {
 	$scope.start = function() {
-  		/*if (Fullscreen.isEnabled()) {
-     		$location.path('select');
-  		} else Fullscreen.all(); //Start fullscreen*/
   		$location.path('categories');
 	};
 });

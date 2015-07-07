@@ -1,17 +1,19 @@
-html, body { height: 100%; overflow-x: hidden; }
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+html, body { min-height: 100% }
 
 .fullscreen {
 	position: fixed;
-    border: none;
-    width: 100%;
-    height: 100%;
+  	border: none;
+  	width: 100%;
+  	min-height: 100%;
 }
 
 .intro-bg {
 	background-image: url('../images/booth_main1_blur.jpg');
 	background-repeat: no-repeat;
-  	background-position: top center;
-  	background-size: cover;
+	background-position: top center;
+	background-size: cover;
 }
 
 .intro-box {
@@ -22,9 +24,29 @@ html, body { height: 100%; overflow-x: hidden; }
 }
 
 h1 {
-	font-size: 7em;
+	font-size: 8em;
+  	font-family: 'Indie Flower', cursive;
 }
 
 .touch-start {
 	font-size: 2em;
+}
+
+.category-select-box a {
+	position: relative;
+	height: 300px;
+	display: block;
+}
+
+.category-select-box img {
+	max-width: 100%;
+}
+
+.category-select-box .title {
+	display: block;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	font-size: 5em;
+	text-align: center;
+	height: 100%;
 }
