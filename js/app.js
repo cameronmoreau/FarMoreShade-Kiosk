@@ -101,13 +101,13 @@ app.controller('CategorySelectController', function($scope, $location, LocalData
 		$scope.categories = LocalData.data();
 	});*/
 	$scope.onImageLoad = function(e) {
-		$(e.target).parent().addClass('animated bounceIn');
+		//$(e.target).parent().addClass('animated bounceIn');
 	};
 });
 
 app.controller('CategoryController', function($scope, $routeParams, LocalData, $http) {
 	$scope.onImageLoad = function(e) {
-		$(e.target).parent().addClass('animated bounceIn');
+		//$(e.target).parent().fadeIn();
 	};
 });
 
