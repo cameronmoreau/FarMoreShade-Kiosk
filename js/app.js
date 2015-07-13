@@ -29,7 +29,7 @@ app.config(function($routeProvider, $locationProvider) {
 			controller: 'CategoryController'
 		})
 		.when('/category-shop', {
-			templateUrl: 'templates/category-select.html',
+			templateUrl: 'templates/category-shop.html',
 			//controller: 'CategorySelectController'
 		})
 		/*.when('/category/:category', {
