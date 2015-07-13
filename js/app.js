@@ -24,10 +24,18 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'templates/category-select.html',
 			controller: 'CategorySelectController'
 		})
-		.when('/category/:category', {
-			templateUrl: 'templates/category.html',
+		.when('/category-patterns', {
+			templateUrl: 'templates/category-patterns.html',
 			controller: 'CategoryController'
 		})
+		.when('/category-shop', {
+			templateUrl: 'templates/category-select.html',
+			//controller: 'CategorySelectController'
+		})
+		/*.when('/category/:category', {
+			templateUrl: 'templates/category.html',
+			controller: 'CategoryController'
+		})*/
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -98,18 +106,6 @@ app.controller('CategorySelectController', function($scope, $location, LocalData
 });
 
 app.controller('CategoryController', function($scope, $routeParams, LocalData, $http) {
-	$scope.selectedCategory = $routeParams.category;
-	$scope.items = [];
-
-	/*LocalData.getContents($scope.selectedCategory).then(function() {
-		$scope.items = LocalData.data();
-	});*/
-
-	$http.get('../include/backend.php?category='+$scope.selectedCategory)
-		.success(function(data) {
-			$scope.items = data.data;
-		});
-
 	$scope.onImageLoad = function(e) {
 		$(e.target).parent().addClass('animated bounceIn');
 	};
